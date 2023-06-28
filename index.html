@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Tiro al blanco</title>
-	</html><meta name="viewport" content="width=device-width initial-scale=1">
+	</html><meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&display=swap" rel="stylesheet">
 </head>
 <body style="background-color:black">
 	<header>
-		<h1 style="width:150vw;text-align:center;font-family: 'Chakra Petch', sans-serif;font-size: 60px;color:white;">¡Acierta en el blanco! :3</h1>
+		<h1 style="width:100vw;text-align:center;font-family: 'Chakra Petch', sans-serif;font-size: 60px;color:white;">¡Acierta en el blanco! :3</h1>
 	</header>
-	<canvas width="600" height="1000"> </canvas>
+	<canvas width="390" height="700"> </canvas>
 </body>
 
 
@@ -24,7 +24,7 @@
 	var yAleatorio;
 
 	pincel.fillStyle = "lightgrey";
-	pincel.fillRect(0,0,600,1000);
+	pincel.fillRect(0,0,390,700);
 
 	function disenharCircunferencia (x,y,radio,color) {
 
@@ -37,7 +37,7 @@
 
 	function limpiarPantalla () {
 
-		pincel.clearRect(0,0,600,1000);
+		pincel.clearRect(0,0,390,700);
 	}
 
 	var x = 0
@@ -60,7 +60,7 @@ disenharCircunferencia(x,y,radio,"red");
 	function actualizarPantalla () {
 
 		limpiarPantalla();
-		xAleatorio = sortearPosicion(600);
+		xAleatorio = sortearPosicion(390);
 		yAleatorio = sortearPosicion(1000);
 		disenharObjetivo(xAleatorio,yAleatorio);
 	}
